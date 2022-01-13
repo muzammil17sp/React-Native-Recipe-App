@@ -51,7 +51,7 @@ const RecipeList = ({navigation}) => {
           renderItem={({item}) => <Recipe item={item} navigation={navigation} />}
         />
       ) : (
-        <ActivityIndicator size="large" color={background} />
+        <ActivityIndicator size="large" color={green} />
       )}
     </View>
   );

@@ -21,6 +21,11 @@ buildscript {
 
 allprojects {
     repositories {
+        jcenter() {
+            content {
+                includeModule("com.yqritc", "android-scalablevideoview")
+            }
+        }
         mavenCentral()
         mavenLocal()
         maven {
