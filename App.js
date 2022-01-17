@@ -1,14 +1,20 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet,StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import RecipeList from './screens/Recipe';
-import DetailRecipe from './screens/DetailRecipe';
+import RecipeList from './src/screens/Recipe';
+import DetailRecipe from './src/screens/DetailRecipe';
 
 const App = () => {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer initialRouteName="Recipe">
+    
+    <StatusBar
+    backgroundColor="white"
+    barStyle="dark-content"
+  />
+
       <Stack.Navigator>
         <Stack.Screen
           name="Recipe"
@@ -28,4 +34,3 @@ const App = () => {
 export default App;
 
 const styles = StyleSheet.create({});
-// https://dribbble.com/shots/15921850/attachments/7752877?mode=media

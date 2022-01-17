@@ -6,9 +6,10 @@ import {
   Text,
   TextInput,
   View,
+  
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {fetchRecipes} from '../api/Api';
+import {fetchRecipes} from "../api/Api";
 import Recipe from '../components/Recipe';
 import {black, grey, white, green, background, lightGrey} from '../utils/color';
 
@@ -41,7 +42,7 @@ const RecipeList = ({navigation}) => {
           />
         </View>
         <View style={styles.filterIcon}>
-          <Icon name="filter-outline" size={22} color={green} />
+          <Icon name="filter-outline" size={20} color={white} />
         </View>
       </View>
       {recipes.length > 0 ? (
@@ -63,11 +64,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    padding: 20,
+   paddingHorizontal:20
   },
   bigHeading: {
     fontSize: 24,
     fontWeight: 'bold',
+    fontFamily:"Lato-Bold",
     color: black,
   },
   mainInputContainer: {
@@ -98,7 +100,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     backgroundColor: white,
     borderRadius: 6,
-    backgroundColor: background,
+    backgroundColor: black,
     opacity: 0.9,
   },
 });
